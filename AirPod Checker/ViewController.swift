@@ -133,23 +133,33 @@ class ViewController: NSViewController
             
             for store in stores
             {
+                // Check for required data
                 guard let name = store["storeName"] as? String,
                     let city = store["city"] as? String,
                     let available = store["partsAvailability"] as? [String: Any],
-                    let part = available["MMEF2ZM/A"] as? [String: Any],
-                    let availableDateString = part["pickupSearchQuote"] as? String else
+                    let part = available["MMEF2ZM/A"] as? [String: Any] else
                 {
                     continue
                 }
                 
-                // Post process
+                // Check for pick-up date (in stock data differs)
+                guard let availableDateString = part["pickupSearchQuote"] as? String else
+                {
+                    foundEntries.append(AvailableModel(name: name, city: city))
+                    return
+                }
+                
+                // Parse available data
                 let trimmedData = availableDateString.replacingOccurrences(of: "Verfügbar<br/>", with: "")
+                
+                // Another step to work with diffrent in stock data
                 guard let availableDate = _self.shortDateFormatter.date(from: "\(trimmedData) 2017") else
                 {
-                    print("Skipping entry for store: \(name)")
-                    continue
+                    foundEntries.append(AvailableModel(name: name, city: city))
+                    return
                 }
                 
+                // IF all check passed, initialize model with parsed json data
                 foundEntries.append(AvailableModel(name: name, city: city, availableDate: availableDate))
             }
             
@@ -265,7 +275,7 @@ class AvailableModel
     
     // MARK - Init -
     
-    init(name: String, city: String, availableDate: Date)
+    init(name: String, city: String, availableDate: Date = Date())
     {
         self.name               = name
         self.city               = city
