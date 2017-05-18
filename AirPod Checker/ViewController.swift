@@ -119,15 +119,10 @@ class ViewController: NSViewController
                 return
             }
             
-            guard let json = response.result.value as? [String: Any] else
+            guard let json = response.result.value as? [String: Any] ,
+                  let body = json["body"] as? [String : Any],
+                  let stores = body["stores"] as? [[String: Any]] else
             {
-                return
-            }
-            
-            guard let body = json["body"] as? [String : Any],
-                let stores = body["stores"] as? [[String: Any]] else
-            {
-                print("Nothing found")
                 return
             }
             
@@ -146,7 +141,7 @@ class ViewController: NSViewController
                 guard let availableDateString = part["pickupSearchQuote"] as? String else
                 {
                     foundEntries.append(AvailableModel(name: name, city: city))
-                    return
+                    continue
                 }
                 
                 // Parse available data
@@ -156,7 +151,7 @@ class ViewController: NSViewController
                 guard let availableDate = _self.shortDateFormatter.date(from: "\(trimmedData) 2017") else
                 {
                     foundEntries.append(AvailableModel(name: name, city: city))
-                    return
+                    continue
                 }
                 
                 // IF all check passed, initialize model with parsed json data
@@ -190,19 +185,6 @@ class ViewController: NSViewController
             return  "in \(dayString) Tagen"
         }
     }
-    
-    
-    fileprivate func postTweet()
-    {
-        let selectedEntry   = entries[tableView.selectedRow]
-        let suffix          = suffixStringForDaysUntilAvailable(entry: selectedEntry)
-        let message         = "Der Apple Store \(selectedEntry.name ?? "") hat \(suffix) AirPods vorrätig."
-        let service         = NSSharingService(named: NSSharingServiceNamePostOnTwitter)
-        service?.delegate   = self
-        
-        service?.perform(withItems: [message])
-    }
-    
 }
 
 // MARK: - NSTableViewDelegate -
@@ -250,14 +232,6 @@ extension ViewController: NSTableViewDataSource
     {
         return entries.count
     }
-}
-
-
-// MARK: - NSSharingServiceDelegate -
-
-extension ViewController: NSSharingServiceDelegate
-{
-    
 }
 
 
