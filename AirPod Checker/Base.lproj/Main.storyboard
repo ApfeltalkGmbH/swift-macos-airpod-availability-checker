@@ -159,7 +159,7 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                                 <tableColumn identifier="days" width="209" minWidth="10" maxWidth="3.4028234663852886e+38" id="eP9-XX-s5p">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Verfügbar in">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="(Eventuell) verfügbar">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -209,8 +209,8 @@
                                 </tableHeaderView>
                             </scrollView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMU-g1-G38">
-                                <rect key="frame" x="8" y="14" width="225" height="13"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="AirPod Verfügbarkeitsüberprüfungsprogramm" id="TYf-kf-YQR">
+                                <rect key="frame" x="8" y="14" width="305" height="13"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Experimentelles AirPod Verfügbarkeitsüberprüfungsprogramm" id="TYf-kf-YQR">
                                     <font key="font" metaFont="system" size="10"/>
                                     <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

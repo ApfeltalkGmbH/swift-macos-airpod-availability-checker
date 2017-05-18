@@ -31,6 +31,11 @@ class ViewController: NSViewController
     
     fileprivate var entries = [AvailableModel]()
     
+    
+    // MARK: - Private constants -
+    
+    private let countOfGermanStores = 15
+    
     private let shortDateFormatter = { (Void) -> DateFormatter in
         let formatter           = DateFormatter()
         formatter.dateFormat    = "d MMM yyyy"
@@ -100,9 +105,20 @@ class ViewController: NSViewController
                 // Sort entries
                 _self.entries.sort(by: { $0.city < $1.city})
                 
+                // Update ui
                 _self.tableView.reloadData()
                 _self.refreshButton.isEnabled = true
                 _self.progressIndicator.stopAnimation(false)
+                
+                // Inform user if not all data could be processed successfully
+                if _self.entries.count < _self.countOfGermanStores
+                {
+                    let alert               = NSAlert()
+                    alert.messageText       = "Es konnten nicht alle \(_self.countOfGermanStores) erfolgreich überprüft werden."
+                    alert.informativeText   = "Bitte gehe auf www.apple.de um die Verfügbarkeit in allen Stores einzusehen."
+                    alert.icon              = NSImage()
+                    alert.runModal()
+                }
             }
         }
     }
@@ -119,37 +135,42 @@ class ViewController: NSViewController
                 return
             }
             
-            guard let json = response.result.value as? [String: Any] else
+            guard let json = response.result.value as? [String: Any] ,
+                  let body = json["body"] as? [String : Any],
+                  let stores = body["stores"] as? [[String: Any]] else
             {
-                return
-            }
-            
-            guard let body = json["body"] as? [String : Any],
-                let stores = body["stores"] as? [[String: Any]] else
-            {
-                print("Nothing found")
                 return
             }
             
             for store in stores
             {
+                // Check for required data
                 guard let name = store["storeName"] as? String,
                     let city = store["city"] as? String,
                     let available = store["partsAvailability"] as? [String: Any],
-                    let part = available["MMEF2ZM/A"] as? [String: Any],
-                    let availableDateString = part["pickupSearchQuote"] as? String else
+                    let part = available["MMEF2ZM/A"] as? [String: Any] else
                 {
                     continue
                 }
                 
-                // Post process
+                // Check for pick-up date (in stock data differs)
+                guard let availableDateString = part["pickupSearchQuote"] as? String else
+                {
+                    foundEntries.append(AvailableModel(name: name, city: city))
+                    continue
+                }
+                
+                // Parse available data
                 let trimmedData = availableDateString.replacingOccurrences(of: "Verfügbar<br/>", with: "")
+                
+                // Another step to work with diffrent in stock data
                 guard let availableDate = _self.shortDateFormatter.date(from: "\(trimmedData) 2017") else
                 {
-                    print("Skipping entry for store: \(name)")
+                    foundEntries.append(AvailableModel(name: name, city: city))
                     continue
                 }
                 
+                // IF all check passed, initialize model with parsed json data
                 foundEntries.append(AvailableModel(name: name, city: city, availableDate: availableDate))
             }
             
@@ -180,19 +201,6 @@ class ViewController: NSViewController
             return  "in \(dayString) Tagen"
         }
     }
-    
-    
-    fileprivate func postTweet()
-    {
-        let selectedEntry   = entries[tableView.selectedRow]
-        let suffix          = suffixStringForDaysUntilAvailable(entry: selectedEntry)
-        let message         = "Der Apple Store \(selectedEntry.name ?? "") hat \(suffix) AirPods vorrätig."
-        let service         = NSSharingService(named: NSSharingServiceNamePostOnTwitter)
-        service?.delegate   = self
-        
-        service?.perform(withItems: [message])
-    }
-    
 }
 
 // MARK: - NSTableViewDelegate -
@@ -243,14 +251,6 @@ extension ViewController: NSTableViewDataSource
 }
 
 
-// MARK: - NSSharingServiceDelegate -
-
-extension ViewController: NSSharingServiceDelegate
-{
-    
-}
-
-
 // MARK: - AvailableModel -
 
 class AvailableModel
@@ -265,7 +265,7 @@ class AvailableModel
     
     // MARK - Init -
     
-    init(name: String, city: String, availableDate: Date)
+    init(name: String, city: String, availableDate: Date = Date())
     {
         self.name               = name
         self.city               = city
