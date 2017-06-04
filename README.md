@@ -16,6 +16,9 @@ Simple macOS Swift app to check the availability of AirPods in the German retail
 	</a>
 </div>
 
+## Media coverage
+
+The app had a minor media coverage with articles in the German speaking <a href="https://www.apfeltalk.de/magazin/2017/05/12/airpods-verfuegbarkeit/">Apfeltalk</a> magazin and the also German speaking mainstream computer magazin <a href="http://www.computerbild.de/artikel/cb-News-Internet-AirPods-ausverkauft-trotzdem-kaufen-18116593.html">Computerbild</a>.
 ## Caution
 
 I have no glue if Apple does not like it if the App Store json will be used outside the offical website.
