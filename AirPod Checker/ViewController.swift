@@ -267,8 +267,8 @@ class AvailableModel
     
     init(name: String, city: String, availableDate: Date = Date())
     {
-        self.name               = name
-        self.city               = city
+        self.name               = name.trimmed
+        self.city               = city.trimmed
         self.availableDate      = availableDate.startOfDay
         
         let today               = Date().startOfDay
@@ -295,6 +295,20 @@ extension Date
     {
         let difference = Calendar.current.dateComponents(Set(arrayLiteral: unit), from: self, to: date)
         return difference.value(for: unit)
+    }
+}
+
+
+// MARK: - String extension -
+
+extension String
+{
+    // MARK: - Computed properties -
+    
+    var trimmed: String
+    {
+        let characterSet = CharacterSet.whitespacesAndNewlines
+        return trimmingCharacters(in: characterSet)
     }
 }
 
