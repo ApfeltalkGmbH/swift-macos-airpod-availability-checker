@@ -20,14 +20,14 @@ class AboutViewController: NSViewController
     @IBAction
     private func onGitHubButtonClicked(_ sender: Any)
     {
-        guard let url = URL(string: "") else { return }
+        guard let url = URL(string: kGitHubUrl) else { return }
         NSWorkspace.shared.open(url)
     }
     
     @IBAction
     private func onApfeltalkButtonTapped(_ sender: Any)
     {
-        guard let url = URL(string: "") else { return }
+        guard let url = URL(string: kApfeltalkUrl) else { return }
         NSWorkspace.shared.open(url)
     }
 }
