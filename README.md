@@ -1,5 +1,12 @@
 # swift-macos-airpod-availability-checker
-Simple macOS Swift app to check the availability of **AirPods Pros** in the German Apple retail store locations. Nevertheless the app is neither final nor more than a little gimmick :).
+
+![Logo](docs/icon.png "Logo (Jesper Frommherz, Michael Reimann)")
+
+This is a simple macOS Swift app to check the availability of **AirPods Pros** in the German Apple retail store locations. 
+
+Nevertheless the app is neither final nor more than a little gimmick :). But it's happy coding time!
+
+#communityrocks
 
 ## Install
 1. Clone the repo `https://github.com/tscholze/swift-macos-airpod-availability-checker.git`
@@ -18,6 +25,10 @@ Simple macOS Swift app to check the availability of **AirPods Pros** in the Germ
 		<img src="docs/screenshot-dark.png" height="300px" />
 	</a>
 </div>
+
+## Thanks to
+- Jesper Frommherz - Icon creator ([#neverforgetjesper](https://twitter.com/hashtag/neverforgetjesper))
+- Michael Reimann - Geschäftsführer [Apfeltalk](https://apfeltalk.de)
 
 ## License
 The app is licensed under [MIT](https://en.wikipedia.org/wiki/MIT_License) License.
