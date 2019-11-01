@@ -18,9 +18,9 @@ class ViewController: NSViewController
     
     // MARK: - Private constants -
     
-    private let zipSouth = "86150"
-    private let zipNorth = "20095"
-    private let jsonUrl = "https://www.apple.com/de/shop/retail/pickup-message?parts.0=MWP22ZM%2FA&location="
+    private let kZipSouth = "86150"
+    private let kZipNorth = "20095"
+    private let kJsonUrl = "https://www.apple.com/de/shop/retail/pickup-message?parts.0=MWP22ZM%2FA&location="
     private let storeUrl = "https://www.apple.com/de/airpods-pro"
     
     // MARK: - Private properties -
@@ -45,7 +45,6 @@ class ViewController: NSViewController
     override func viewDidAppear()
     {
         super.viewDidAppear()
-        
         view.window?.title = "AirPods Pro Checker"
     }
     
@@ -70,7 +69,7 @@ class ViewController: NSViewController
     private func loadData()
     {
         // Load stores form the south of Germany.
-        loadData(forZip: zipSouth) {[weak self] (southStores, error) in
+        loadData(forZip: kZipSouth) {[weak self] (southStores, error) in
             
             guard let self = self else { return }
             
@@ -89,7 +88,7 @@ class ViewController: NSViewController
             self.stores = southStores ?? []
             
             // Secondly load stores from the north of the country.
-            self.loadData(forZip: self.zipNorth) { [weak self] (northStores, _) in
+            self.loadData(forZip: self.kZipNorth) { [weak self] (northStores, _) in
                 // Only add not already present stores to the list.
                 for store in northStores ?? []
                 {
@@ -115,7 +114,7 @@ class ViewController: NSViewController
     private func loadData(forZip zip: String, completion: @escaping (([Store]?, String?) -> Void))
     {
         // Build url.
-        guard let url = URL(string: "\(jsonUrl)\(zip)") else { return }
+        guard let url = URL(string: "\(kJsonUrl)\(zip)") else { return }
         
         // Create task to request data.
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -153,13 +152,13 @@ extension ViewController: NSTableViewDelegate
 {
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?
     {
-        guard let identifier = tableColumn?.identifier else
-        {
-            return nil
-        }
+        // Get requesting identifier.
+        guard let identifier = tableColumn?.identifier else {  return nil }
         
-        let selectedEntry = stores[row]
+        // Get related store.
+        let store = stores[row]
         
+        // Create cell accordingly to its identifier.
         guard let cell = tableView.makeView(withIdentifier: identifier, owner: nil) as? NSTableCellView else
         {
             return nil
@@ -167,17 +166,17 @@ extension ViewController: NSTableViewDelegate
         
         if identifier.rawValue == "store"
         {
-            cell.textField?.stringValue = selectedEntry.name
+            cell.textField?.stringValue = store.name
         }
             
         else if identifier.rawValue == "city"
         {
-            cell.textField?.stringValue = selectedEntry.city
+            cell.textField?.stringValue = store.city
         }
             
         else if identifier.rawValue == "days"
         {
-            cell.textField?.stringValue = selectedEntry.partsAvailability.mwp22ZmA.sanitizedAvailableDate
+            cell.textField?.stringValue = store.partsAvailability.mwp22ZmA.sanitizedAvailableDate
         }
         
         return cell

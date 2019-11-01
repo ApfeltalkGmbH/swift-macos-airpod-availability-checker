@@ -8,8 +8,7 @@
 
 import AppKit
 
-
-extension ViewController
+extension NSViewController
 {
     func showCloseAlert(title: String, text: String, completion : (Bool) -> Void)
     {

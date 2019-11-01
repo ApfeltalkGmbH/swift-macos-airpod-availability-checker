@@ -13,6 +13,7 @@
 		4451FF82236C9FAB006544E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4451FF80236C9FAB006544E9 /* Main.storyboard */; };
 		4451FF8B236CA5F7006544E9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4451FF8A236CA5F7006544E9 /* Models.swift */; };
 		4451FF8D236CAE27006544E9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4451FF8C236CAE27006544E9 /* Extensions.swift */; };
+		4451FF8F236CBB19006544E9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4451FF8E236CBB19006544E9 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4451FF84236C9FAB006544E9 /* AirPods_Pro_Checker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AirPods_Pro_Checker.entitlements; sourceTree = "<group>"; };
 		4451FF8A236CA5F7006544E9 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		4451FF8C236CAE27006544E9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4451FF8E236CBB19006544E9 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				4451FF7A236C9FAA006544E9 /* AppDelegate.swift */,
 				4451FF7C236C9FAA006544E9 /* ViewController.swift */,
+				4451FF8E236CBB19006544E9 /* AboutViewController.swift */,
 				4451FF8A236CA5F7006544E9 /* Models.swift */,
 				4451FF8C236CAE27006544E9 /* Extensions.swift */,
 				4451FF7E236C9FAB006544E9 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 				4451FF8B236CA5F7006544E9 /* Models.swift in Sources */,
 				4451FF7D236C9FAA006544E9 /* ViewController.swift in Sources */,
 				4451FF7B236C9FAA006544E9 /* AppDelegate.swift in Sources */,
+				4451FF8F236CBB19006544E9 /* AboutViewController.swift in Sources */,
 				4451FF8D236CAE27006544E9 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

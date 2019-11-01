@@ -15,6 +15,13 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="AirPods Pro Checker" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
+                                        <menuItem title="About AirPodsPro Checker" id="ucv-GJ-2Fa">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <segue destination="7Mo-ZF-lEZ" kind="modal" id="moo-8u-dsP"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="Gyl-hp-yEJ"/>
                                         <menuItem title="Quit AirPods Pro Checker" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
@@ -54,23 +61,23 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="537" y="349"/>
         </scene>
         <!--AirPods Pro Checker-->
         <scene sceneID="RUo-3t-yWg">
             <objects>
-                <viewController title="AirPods Pro Checker" id="0Cv-Fv-9nz" customClass="ViewController" customModule="AirPod_Checker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="AirPods Pro Checker" id="0Cv-Fv-9nz" customClass="ViewController" customModule="AirPods_Pro_Checker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="7yv-GX-lte">
                         <rect key="frame" x="0.0" y="0.0" width="523" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kot-pS-5Qw">
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="42" horizontalPageScroll="10" verticalLineScroll="42" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kot-pS-5Qw">
                                 <rect key="frame" x="0.0" y="41" width="523" height="229"/>
                                 <clipView key="contentView" id="2MN-eg-biB">
                                     <rect key="frame" x="1" y="0.0" width="521" height="228"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" headerView="13O-dy-1X6" viewBased="YES" id="aly-Th-Mul">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="40" rowSizeStyle="automatic" headerView="13O-dy-1X6" viewBased="YES" id="aly-Th-Mul">
                                             <rect key="frame" x="0.0" y="0.0" width="521" height="203"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -79,7 +86,7 @@
                                             <tableColumns>
                                                 <tableColumn identifier="city" width="118" minWidth="40" maxWidth="1000" headerToolTip="" id="uas-lr-xtC">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Stadt">
-                                                        <font key="font" metaFont="message" size="11"/>
+                                                        <font key="font" metaFont="menu" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -119,7 +126,7 @@
                                                 </tableColumn>
                                                 <tableColumn identifier="store" width="185" minWidth="40" maxWidth="1000" headerToolTip="" id="e38-im-TrR">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Store">
-                                                        <font key="font" metaFont="message" size="11"/>
+                                                        <font key="font" metaFont="menu" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -159,7 +166,7 @@
                                                 </tableColumn>
                                                 <tableColumn identifier="days" width="209" minWidth="10" maxWidth="3.4028234663852886e+38" id="YXw-5y-fDD">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="(Eventuell) verfügbar">
-                                                        <font key="font" metaFont="message" size="11"/>
+                                                        <font key="font" metaFont="menu" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </tableHeaderCell>
@@ -271,7 +278,99 @@
                 </viewController>
                 <customObject id="N7t-2O-zER" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="655"/>
+            <point key="canvasLocation" x="538" y="813"/>
+        </scene>
+        <!--AirPods Pro Checker-->
+        <scene sceneID="xE7-DC-B5m">
+            <objects>
+                <viewController title="AirPods Pro Checker" id="7Mo-ZF-lEZ" customClass="AboutViewController" customModule="AirPod_Checker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="HR5-6O-38Y">
+                        <rect key="frame" x="0.0" y="0.0" width="461" height="348"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aKP-1y-2nO">
+                                <rect key="frame" x="18" y="312" width="425" height="16"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="AirPods (Pro) Checker v 2.0" id="ZO7-cZ-XSd">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Qa3-6S-Uv6">
+                                <rect key="frame" x="18" y="218" width="425" height="32"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="In Kooperation mit apfeltalk.de - Von der Community, für die Community." id="ukz-tx-8ZE">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aaO-f9-5UW">
+                                <rect key="frame" x="180" y="81" width="101" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="Usc-tm-jhF"/>
+                                    <constraint firstAttribute="width" secondItem="aaO-f9-5UW" secondAttribute="height" multiplier="101:102" id="o7o-7z-LqJ"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="apfeltalk-logo" id="qER-YN-OKB"/>
+                            </imageView>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="O7e-Sq-W0J">
+                                <rect key="frame" x="18" y="265" width="425" height="32"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="eGc-e5-mFy">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">Es prüft die mögliche Verfügbarkeit von AirPods in den deutschen Apple Stores. Entwickelt von Michael Reimann und Tobias Scholze.</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UPq-md-rqD">
+                                <rect key="frame" x="14" y="13" width="251" height="32"/>
+                                <buttonCell key="cell" type="push" title="Original GitHub Projekt öffnen" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jVj-u9-2Cx">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onGitHubButtonClicked:" target="7Mo-ZF-lEZ" id="P7u-sr-AZE"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Sal-UO-P2L">
+                                <rect key="frame" x="273" y="13" width="174" height="32"/>
+                                <buttonCell key="cell" type="push" title="apfeltalk.de öffnen" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="84P-jl-vaS">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onApfeltalkButtonTapped:" target="7Mo-ZF-lEZ" id="W8w-6C-QgL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Qa3-6S-Uv6" firstAttribute="top" secondItem="O7e-Sq-W0J" secondAttribute="bottom" constant="15" id="3uk-5s-Tuw"/>
+                            <constraint firstItem="aaO-f9-5UW" firstAttribute="centerX" secondItem="Qa3-6S-Uv6" secondAttribute="centerX" id="4lN-ch-6Hn"/>
+                            <constraint firstItem="aKP-1y-2nO" firstAttribute="top" secondItem="HR5-6O-38Y" secondAttribute="top" constant="20" id="83K-de-Wx5"/>
+                            <constraint firstItem="aKP-1y-2nO" firstAttribute="centerX" secondItem="HR5-6O-38Y" secondAttribute="centerX" id="FPL-Fq-6tU"/>
+                            <constraint firstItem="Qa3-6S-Uv6" firstAttribute="centerX" secondItem="O7e-Sq-W0J" secondAttribute="centerX" id="LB1-Px-1et"/>
+                            <constraint firstItem="O7e-Sq-W0J" firstAttribute="trailing" secondItem="aKP-1y-2nO" secondAttribute="trailing" id="LMt-hG-KCk"/>
+                            <constraint firstItem="O7e-Sq-W0J" firstAttribute="top" secondItem="aKP-1y-2nO" secondAttribute="bottom" constant="15" id="RIm-jO-7rA"/>
+                            <constraint firstItem="Sal-UO-P2L" firstAttribute="trailing" secondItem="Qa3-6S-Uv6" secondAttribute="trailing" id="SuX-9j-2t2"/>
+                            <constraint firstItem="O7e-Sq-W0J" firstAttribute="leading" secondItem="aKP-1y-2nO" secondAttribute="leading" id="T37-90-qwo"/>
+                            <constraint firstItem="Qa3-6S-Uv6" firstAttribute="leading" secondItem="O7e-Sq-W0J" secondAttribute="leading" id="WaU-DN-B9R"/>
+                            <constraint firstAttribute="bottom" secondItem="UPq-md-rqD" secondAttribute="bottom" constant="20" id="Y7C-EG-EfN"/>
+                            <constraint firstItem="Qa3-6S-Uv6" firstAttribute="trailing" secondItem="O7e-Sq-W0J" secondAttribute="trailing" id="ZBu-bR-w2J"/>
+                            <constraint firstItem="Sal-UO-P2L" firstAttribute="width" secondItem="UPq-md-rqD" secondAttribute="width" multiplier="0.677824" id="bKU-xT-oNz"/>
+                            <constraint firstItem="Sal-UO-P2L" firstAttribute="top" secondItem="UPq-md-rqD" secondAttribute="top" id="gTT-dh-2DZ"/>
+                            <constraint firstItem="Sal-UO-P2L" firstAttribute="leading" secondItem="UPq-md-rqD" secondAttribute="trailing" constant="20" id="hx2-GL-4bE"/>
+                            <constraint firstItem="UPq-md-rqD" firstAttribute="leading" secondItem="Qa3-6S-Uv6" secondAttribute="leading" id="mBN-nC-7eC"/>
+                            <constraint firstItem="Sal-UO-P2L" firstAttribute="top" secondItem="aaO-f9-5UW" secondAttribute="bottom" constant="40" id="tbk-fy-xRr"/>
+                            <constraint firstItem="aaO-f9-5UW" firstAttribute="top" secondItem="Qa3-6S-Uv6" secondAttribute="bottom" constant="35" id="twH-9G-n9k"/>
+                            <constraint firstItem="aKP-1y-2nO" firstAttribute="leading" secondItem="HR5-6O-38Y" secondAttribute="leading" constant="20" id="ujo-rE-YQ5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="zgb-HO-Zcv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="522" y="-62"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="apfeltalk-logo" width="150" height="150"/>
+    </resources>
 </document>
