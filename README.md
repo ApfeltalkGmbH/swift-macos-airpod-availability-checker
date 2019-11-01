@@ -28,7 +28,7 @@ Nevertheless the app is neither final nor more than a little gimmick :). But it'
 
 ## Media coverage
 ### Version 1
-The app had a minor media coverage with articles in the German speaking Apfeltalk magazin and the also German speaking mainstream computer magazin Computerbild.
+The app had a minor media coverage with articles in the German speaking [Apfeltalk magazin](https://www.apfeltalk.de/magazin/news/airpods-verfuegbarkeit/) and the also German speaking computer magazin [Computerbild](https://www.computerbild.de/artikel/cb-News-Internet-AirPods-ausverkauft-trotzdem-kaufen-18116593.html).
 
 ## Thanks to
 - Jesper Frommherz - Icon creator ([#neverforgetjesper](https://twitter.com/hashtag/neverforgetjesper))
