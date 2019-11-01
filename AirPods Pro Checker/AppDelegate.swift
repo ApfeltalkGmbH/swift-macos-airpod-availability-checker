@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  AirPod Checker
+//  AirPods Pro Checker
 //
-//  Created by Tobias Scholze on 10.05.17.
-//  Copyright © 2017 Tobias Scholze. All rights reserved.
+//  Created by Tobias Scholze on 01.11.19.
+//  Copyright © 2019 Tobias Scholze. All rights reserved.
 //
 
 import Cocoa
