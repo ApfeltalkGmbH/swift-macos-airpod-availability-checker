@@ -70,7 +70,11 @@ struct Mwp22ZmA: Codable
         }
 
         // Calculate delta in days from now till availability date.
-        let deltaToAvailbility = Int(today.distance(to: _date) / 60 / 60 / 24)
+        let components = Calendar.current.dateComponents([.day], from: today, to: _date)
+        let deltaToAvailbility = components.day ?? 0
+        
+        // macOS 10.15 version:
+        // let deltaToAvailbility = Int(today.distance(to: _date) / 60 / 60 / 24)
         
         // Add special formatting for known values.
         if deltaToAvailbility == 0
