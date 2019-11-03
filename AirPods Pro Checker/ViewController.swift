@@ -68,6 +68,9 @@ class ViewController: NSViewController
     
     private func loadData()
     {
+        // Show loading indicator.
+        progressIndicator.startAnimation(nil)
+        
         // Load stores form the south of Germany.
         loadData(forZip: kZipSouth) {[weak self] (southStores, error) in
             

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -283,13 +284,13 @@
         <!--AirPods Pro Checker-->
         <scene sceneID="xE7-DC-B5m">
             <objects>
-                <viewController title="AirPods Pro Checker" id="7Mo-ZF-lEZ" customClass="AboutViewController" customModule="AirPod_Checker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="AirPods Pro Checker" id="7Mo-ZF-lEZ" customClass="AboutViewController" customModule="AirPods_Pro_Checker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="HR5-6O-38Y">
-                        <rect key="frame" x="0.0" y="0.0" width="461" height="348"/>
+                        <rect key="frame" x="0.0" y="0.0" width="461" height="364"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aKP-1y-2nO">
-                                <rect key="frame" x="18" y="312" width="425" height="16"/>
+                                <rect key="frame" x="18" y="328" width="425" height="16"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="AirPods (Pro) Checker v 2.0" id="ZO7-cZ-XSd">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -298,7 +299,7 @@
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Qa3-6S-Uv6">
                                 <rect key="frame" x="18" y="218" width="425" height="32"/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="In Kooperation mit apfeltalk.de - Von der Community, für die Community." id="ukz-tx-8ZE">
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="In Kooperation mit apfeltalk.de - Von der Community, für die Community." id="ukz-tx-8ZE">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -313,10 +314,10 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="apfeltalk-logo" id="qER-YN-OKB"/>
                             </imageView>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="O7e-Sq-W0J">
-                                <rect key="frame" x="18" y="265" width="425" height="32"/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="eGc-e5-mFy">
+                                <rect key="frame" x="18" y="265" width="425" height="48"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="eGc-e5-mFy">
                                     <font key="font" metaFont="system"/>
-                                    <string key="title">Es prüft die mögliche Verfügbarkeit von AirPods in den deutschen Apple Stores. Entwickelt von Michael Reimann und Tobias Scholze.</string>
+                                    <string key="title">Es prüft die mögliche Verfügbarkeit von AirPods  Pro in den deutschen Apple Stores. Entwickelt von Michael Reimann und Tobias Scholze.</string>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
