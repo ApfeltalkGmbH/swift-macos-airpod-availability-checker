@@ -30,3 +30,12 @@ extension DateFormatter
         return formatter
     }()
 }
+
+extension String
+{    
+    var trimmed: String
+    {
+        let characterSet = CharacterSet.whitespacesAndNewlines
+        return trimmingCharacters(in: characterSet)
+    }
+}

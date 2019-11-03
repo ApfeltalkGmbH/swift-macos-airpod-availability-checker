@@ -92,14 +92,14 @@ class ViewController: NSViewController
                 // Only add not already present stores to the list.
                 for store in northStores ?? []
                 {
-                    if (self?.stores.contains(where: { $0.name == store.name }) == false)
+                    if (self?.stores.contains(where: { $0.sanitizedName == store.sanitizedName }) == false)
                     {
                         self?.stores.append(store)
                     }
                 }
                 
                 // Order stores.
-                self?.stores.sort(by: { $0.name < $1.name })
+                self?.stores.sort(by: { $0.sanitizedName < $1.sanitizedName })
                 
                 // Reload table view on main thread.
                 DispatchQueue.main.async
@@ -166,7 +166,7 @@ extension ViewController: NSTableViewDelegate
         
         if identifier.rawValue == "store"
         {
-            cell.textField?.stringValue = store.name
+            cell.textField?.stringValue = store.sanitizedName
         }
             
         else if identifier.rawValue == "city"

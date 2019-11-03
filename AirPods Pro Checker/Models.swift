@@ -29,6 +29,11 @@ struct Store: Codable
     let name: String
     let city: String
     let partsAvailability: PartsAvailability
+    
+    var sanitizedName: String
+    {
+        return name.trimmed
+    }
 
     enum CodingKeys: String, CodingKey
     {
