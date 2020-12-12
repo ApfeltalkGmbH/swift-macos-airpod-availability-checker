@@ -10,14 +10,16 @@ import AppKit
 
 extension NSViewController
 {
-    func showCloseAlert(title: String, text: String, completion : (Bool) -> Void)
+    func showCloseAlert(title: String, text: String, completion: @escaping (Bool) -> Void)
     {
-        let alert = NSAlert()
-        alert.messageText = title
-        alert.informativeText = text
-        alert.addButton(withTitle: "OK")
-        alert.alertStyle = NSAlert.Style.warning
-        completion(alert.runModal() == NSApplication.ModalResponse.alertFirstButtonReturn)
+        DispatchQueue.main.async {
+            let alert = NSAlert()
+            alert.messageText = title
+            alert.informativeText = text
+            alert.addButton(withTitle: "OK")
+            alert.alertStyle = NSAlert.Style.warning
+            completion(alert.runModal() == NSApplication.ModalResponse.alertFirstButtonReturn)
+        }
     }
 }
 

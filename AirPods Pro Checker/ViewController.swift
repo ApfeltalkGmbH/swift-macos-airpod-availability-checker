@@ -20,8 +20,8 @@ class ViewController: NSViewController
     
     private let kZipSouth = "86150"
     private let kZipNorth = "20095"
-    private let kJsonUrl = "https://www.apple.com/de/shop/retail/pickup-message?parts.0=MWP22ZM%2FA&location="
-    private let storeUrl = "https://www.apple.com/de/airpods-pro"
+    private let kJsonUrl = "https://www.apple.com/de/shop/retail/pickup-message?parts.0=MGYH3ZM%2FA&location="
+    private let storeUrl = "https://www.apple.com/de/shop/buy-airpods/airpods-max"
     
     // MARK: - Private properties -
     
@@ -45,7 +45,7 @@ class ViewController: NSViewController
     override func viewDidAppear()
     {
         super.viewDidAppear()
-        view.window?.title = "AirPods Pro Checker"
+        view.window?.title = "AirPods Max Checker"
     }
     
     // MARK: - Actions -
@@ -179,7 +179,7 @@ extension ViewController: NSTableViewDelegate
             
         else if identifier.rawValue == "days"
         {
-            cell.textField?.stringValue = store.partsAvailability.mwp22ZmA.sanitizedAvailableDate
+            cell.textField?.stringValue = store.partsAvailability.mgyh3zm.sanitizedAvailableDate
         }
         
         return cell

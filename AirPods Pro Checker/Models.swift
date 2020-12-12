@@ -47,17 +47,17 @@ struct Store: Codable
 
 struct PartsAvailability: Codable
 {
-    let mwp22ZmA: Mwp22ZmA
+    let mgyh3zm: Mgyh3zm
 
     enum CodingKeys: String, CodingKey
     {
-        case mwp22ZmA = "MWP22ZM/A"
+        case mgyh3zm = "MGYH3ZM/A"
     }
 }
 
 // MARK: - Mwp22ZmA -
 
-struct Mwp22ZmA: Codable
+struct Mgyh3zm: Codable
 {
     let pickupSearchQuote: String
 

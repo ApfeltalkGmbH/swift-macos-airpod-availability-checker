@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -64,22 +64,22 @@
             </objects>
             <point key="canvasLocation" x="537" y="349"/>
         </scene>
-        <!--AirPods Pro Checker-->
+        <!--AirPods Max Checker-->
         <scene sceneID="RUo-3t-yWg">
             <objects>
-                <viewController title="AirPods Pro Checker" id="0Cv-Fv-9nz" customClass="ViewController" customModule="AirPods_Pro_Checker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="AirPods Max Checker" id="0Cv-Fv-9nz" customClass="ViewController" customModule="AirPods_Pro_Checker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="7yv-GX-lte">
-                        <rect key="frame" x="0.0" y="0.0" width="523" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="518" height="82"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="42" horizontalPageScroll="10" verticalLineScroll="42" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kot-pS-5Qw">
-                                <rect key="frame" x="0.0" y="41" width="523" height="229"/>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kot-pS-5Qw">
+                                <rect key="frame" x="0.0" y="39" width="518" height="43"/>
                                 <clipView key="contentView" id="2MN-eg-biB">
-                                    <rect key="frame" x="1" y="0.0" width="521" height="228"/>
+                                    <rect key="frame" x="1" y="1" width="516" height="41"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="40" rowSizeStyle="automatic" headerView="13O-dy-1X6" viewBased="YES" id="aly-Th-Mul">
-                                            <rect key="frame" x="0.0" y="0.0" width="521" height="203"/>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="24" rowSizeStyle="medium" headerView="13O-dy-1X6" viewBased="YES" id="aly-Th-Mul">
+                                            <rect key="frame" x="0.0" y="0.0" width="546" height="42"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -87,7 +87,6 @@
                                             <tableColumns>
                                                 <tableColumn identifier="city" width="118" minWidth="40" maxWidth="1000" headerToolTip="" id="uas-lr-xtC">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Stadt">
-                                                        <font key="font" metaFont="menu" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -99,11 +98,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="rjM-1O-aKW">
-                                                            <rect key="frame" x="1" y="1" width="118" height="40"/>
+                                                            <rect key="frame" x="1" y="1" width="123" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="YZy-fm-HN4">
-                                                                    <rect key="frame" x="0.0" y="23" width="118" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="12" width="123" height="17"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="17" id="zRV-89-Xf3"/>
                                                                     </constraints>
@@ -115,8 +114,8 @@
                                                                 </textField>
                                                             </subviews>
                                                             <constraints>
+                                                                <constraint firstItem="YZy-fm-HN4" firstAttribute="centerY" secondItem="rjM-1O-aKW" secondAttribute="centerY" id="d5c-dT-Iji"/>
                                                                 <constraint firstItem="YZy-fm-HN4" firstAttribute="centerX" secondItem="rjM-1O-aKW" secondAttribute="centerX" id="kSt-L1-Rr2"/>
-                                                                <constraint firstItem="YZy-fm-HN4" firstAttribute="top" secondItem="rjM-1O-aKW" secondAttribute="top" id="qV3-tL-BzP"/>
                                                                 <constraint firstItem="YZy-fm-HN4" firstAttribute="leading" secondItem="rjM-1O-aKW" secondAttribute="leading" constant="2" id="uRA-tf-mjt"/>
                                                             </constraints>
                                                             <connections>
@@ -127,7 +126,6 @@
                                                 </tableColumn>
                                                 <tableColumn identifier="store" width="185" minWidth="40" maxWidth="1000" headerToolTip="" id="e38-im-TrR">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Store">
-                                                        <font key="font" metaFont="menu" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -139,11 +137,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="HdI-9Q-0cf">
-                                                            <rect key="frame" x="122" y="1" width="185" height="40"/>
+                                                            <rect key="frame" x="127" y="1" width="185" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="WuV-rn-3aN">
-                                                                    <rect key="frame" x="0.0" y="23" width="185" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="12" width="185" height="17"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="17" id="dn5-wE-2W8"/>
                                                                     </constraints>
@@ -157,7 +155,7 @@
                                                             <constraints>
                                                                 <constraint firstItem="WuV-rn-3aN" firstAttribute="leading" secondItem="HdI-9Q-0cf" secondAttribute="leading" constant="2" id="4wL-b7-mUh"/>
                                                                 <constraint firstItem="WuV-rn-3aN" firstAttribute="centerX" secondItem="HdI-9Q-0cf" secondAttribute="centerX" id="iqF-Jb-CxB"/>
-                                                                <constraint firstItem="WuV-rn-3aN" firstAttribute="top" secondItem="HdI-9Q-0cf" secondAttribute="top" id="zOC-BD-4Gp"/>
+                                                                <constraint firstItem="WuV-rn-3aN" firstAttribute="centerY" secondItem="HdI-9Q-0cf" secondAttribute="centerY" id="qwX-g3-s5s"/>
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="WuV-rn-3aN" id="6cD-PQ-GFR"/>
@@ -165,9 +163,8 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn identifier="days" width="209" minWidth="10" maxWidth="3.4028234663852886e+38" id="YXw-5y-fDD">
+                                                <tableColumn identifier="days" width="225" minWidth="10" maxWidth="3.4028234663852886e+38" id="YXw-5y-fDD">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="(Eventuell) verfügbar">
-                                                        <font key="font" metaFont="menu" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </tableHeaderCell>
@@ -179,11 +176,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="oP3-1t-acy">
-                                                            <rect key="frame" x="310" y="1" width="209" height="40"/>
+                                                            <rect key="frame" x="315" y="1" width="229" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="FwM-er-cPg">
-                                                                    <rect key="frame" x="0.0" y="23" width="209" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="12" width="229" height="17"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="17" id="yFX-oK-gVK"/>
                                                                     </constraints>
@@ -196,7 +193,7 @@
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="FwM-er-cPg" firstAttribute="centerX" secondItem="oP3-1t-acy" secondAttribute="centerX" id="8f0-M8-o02"/>
-                                                                <constraint firstItem="FwM-er-cPg" firstAttribute="top" secondItem="oP3-1t-acy" secondAttribute="top" id="fKG-GB-qnF"/>
+                                                                <constraint firstItem="FwM-er-cPg" firstAttribute="centerY" secondItem="oP3-1t-acy" secondAttribute="centerY" id="nl0-rn-EGh"/>
                                                                 <constraint firstItem="FwM-er-cPg" firstAttribute="leading" secondItem="oP3-1t-acy" secondAttribute="leading" constant="2" id="rgb-Xw-MbP"/>
                                                             </constraints>
                                                             <connections>
@@ -209,32 +206,32 @@
                                         </tableView>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="PHw-gF-8CQ">
-                                    <rect key="frame" x="1" y="218" width="478" height="15"/>
+                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="PHw-gF-8CQ">
+                                    <rect key="frame" x="1" y="26" width="516" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="cpG-fA-kyU">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <tableHeaderView key="headerView" id="13O-dy-1X6">
-                                    <rect key="frame" x="0.0" y="0.0" width="521" height="25"/>
+                                <tableHeaderView key="headerView" wantsLayer="YES" id="13O-dy-1X6">
+                                    <rect key="frame" x="0.0" y="0.0" width="546" height="25"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kw4-X4-pzX">
-                                <rect key="frame" x="8" y="14" width="324" height="13"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Experimentelles AirPod Pro Verfügbarkeitsüberprüfungsprogramm" id="pVi-FU-80Y">
+                                <rect key="frame" x="8" y="13" width="328" height="13"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Experimentelles AirPod Max Verfügbarkeitsüberprüfungsprogramm" id="pVi-FU-80Y">
                                     <font key="font" metaFont="system" size="10"/>
-                                    <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="D8z-uG-b9e">
-                                <rect key="frame" x="254" y="127" width="16" height="16"/>
+                                <rect key="frame" x="251" y="33" width="16" height="16"/>
                             </progressIndicator>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mMI-IT-bzA">
-                                <rect key="frame" x="352" y="8" width="78" height="23"/>
+                                <rect key="frame" x="348" y="7" width="79" height="23"/>
                                 <buttonCell key="cell" type="roundTextured" title="Zum Store" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5Ps-WC-5sk">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -244,7 +241,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C5J-X6-p8s">
-                                <rect key="frame" x="440" y="8" width="78" height="23"/>
+                                <rect key="frame" x="435" y="7" width="79" height="23"/>
                                 <buttonCell key="cell" type="roundTextured" title="Neu laden" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uSB-ff-QFJ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -279,26 +276,26 @@
                 </viewController>
                 <customObject id="N7t-2O-zER" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="538" y="813"/>
+            <point key="canvasLocation" x="537" y="747"/>
         </scene>
         <!--AirPods Pro Checker-->
         <scene sceneID="xE7-DC-B5m">
             <objects>
                 <viewController title="AirPods Pro Checker" id="7Mo-ZF-lEZ" customClass="AboutViewController" customModule="AirPods_Pro_Checker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="HR5-6O-38Y">
-                        <rect key="frame" x="0.0" y="0.0" width="461" height="364"/>
+                        <rect key="frame" x="0.0" y="0.0" width="461" height="363"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aKP-1y-2nO">
-                                <rect key="frame" x="18" y="328" width="425" height="16"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="AirPods (Pro) Checker v 2.0" id="ZO7-cZ-XSd">
+                                <rect key="frame" x="18" y="327" width="425" height="16"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="AirPods (Max) Checker v 3.0" id="ZO7-cZ-XSd">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Qa3-6S-Uv6">
-                                <rect key="frame" x="18" y="218" width="425" height="32"/>
+                                <rect key="frame" x="18" y="217" width="425" height="32"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="In Kooperation mit apfeltalk.de - Von der Community, für die Community." id="ukz-tx-8ZE">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -306,7 +303,7 @@
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aaO-f9-5UW">
-                                <rect key="frame" x="180" y="81" width="101" height="102"/>
+                                <rect key="frame" x="180" y="80" width="101" height="102"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="101" id="Usc-tm-jhF"/>
                                     <constraint firstAttribute="width" secondItem="aaO-f9-5UW" secondAttribute="height" multiplier="101:102" id="o7o-7z-LqJ"/>
@@ -314,7 +311,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="apfeltalk-logo" id="qER-YN-OKB"/>
                             </imageView>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="O7e-Sq-W0J">
-                                <rect key="frame" x="18" y="265" width="425" height="48"/>
+                                <rect key="frame" x="18" y="264" width="425" height="48"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="eGc-e5-mFy">
                                     <font key="font" metaFont="system"/>
                                     <string key="title">Es prüft die mögliche Verfügbarkeit von AirPods  Pro in den deutschen Apple Stores. Entwickelt von Michael Reimann und Tobias Scholze.</string>
@@ -323,7 +320,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UPq-md-rqD">
-                                <rect key="frame" x="14" y="13" width="251" height="32"/>
+                                <rect key="frame" x="13" y="13" width="253" height="32"/>
                                 <buttonCell key="cell" type="push" title="Original GitHub Projekt öffnen" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jVj-u9-2Cx">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -333,7 +330,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Sal-UO-P2L">
-                                <rect key="frame" x="273" y="13" width="174" height="32"/>
+                                <rect key="frame" x="272" y="13" width="176" height="32"/>
                                 <buttonCell key="cell" type="push" title="apfeltalk.de öffnen" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="84P-jl-vaS">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -372,6 +369,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="apfeltalk-logo" width="150" height="150"/>
+        <image name="apfeltalk-logo" width="300" height="300"/>
     </resources>
 </document>
