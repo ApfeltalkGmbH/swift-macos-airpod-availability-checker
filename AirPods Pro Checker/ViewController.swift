@@ -38,6 +38,9 @@ class ViewController: NSViewController
         tableView.delegate = self
         tableView.dataSource = self
         
+        // Set content size
+        preferredContentSize = NSSize(width: 550, height: 460)
+        
         // Load data from server.
         loadData()
     }
@@ -47,6 +50,7 @@ class ViewController: NSViewController
         super.viewDidAppear()
         view.window?.title = "AirPods Max Checker"
     }
+    
     
     // MARK: - Actions -
     

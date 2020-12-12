@@ -50,8 +50,8 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <rect key="contentRect" x="196" y="240" width="500" height="400"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -69,17 +69,48 @@
             <objects>
                 <viewController title="AirPods Max Checker" id="0Cv-Fv-9nz" customClass="ViewController" customModule="AirPods_Max_Checker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" misplaced="YES" id="7yv-GX-lte">
-                        <rect key="frame" x="0.0" y="0.0" width="378" height="284"/>
+                        <rect key="frame" x="0.0" y="0.0" width="258" height="331"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kw4-X4-pzX">
+                                <rect key="frame" x="8" y="13" width="222" height="13"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Experimentelles AirPod Max Verfügbarkeitsüberprüfungsprogramm" id="pVi-FU-80Y">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="D8z-uG-b9e">
+                                <rect key="frame" x="121" y="158" width="16" height="16"/>
+                            </progressIndicator>
+                            <button verticalHuggingPriority="750" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="mMI-IT-bzA">
+                                <rect key="frame" x="242" y="7" width="2" height="23"/>
+                                <buttonCell key="cell" type="roundTextured" title="Zum Store" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5Ps-WC-5sk">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="handleGoToStoreButtonTapped:" target="0Cv-Fv-9nz" id="Yx1-bg-J9H"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C5J-X6-p8s">
+                                <rect key="frame" x="252" y="7" width="2" height="23"/>
+                                <buttonCell key="cell" type="roundTextured" title="Neu laden" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uSB-ff-QFJ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="handleRefreshButtonTapped:" target="0Cv-Fv-9nz" id="abf-HO-6ED"/>
+                                </connections>
+                            </button>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kot-pS-5Qw">
-                                <rect key="frame" x="0.0" y="39" width="398" height="245"/>
+                                <rect key="frame" x="0.0" y="39" width="278" height="292"/>
                                 <clipView key="contentView" id="2MN-eg-biB">
-                                    <rect key="frame" x="1" y="1" width="396" height="243"/>
+                                    <rect key="frame" x="1" y="1" width="276" height="290"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="24" rowSizeStyle="medium" headerView="13O-dy-1X6" viewBased="YES" id="aly-Th-Mul">
-                                            <rect key="frame" x="0.0" y="0.0" width="546" height="218"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="546" height="265"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -207,7 +238,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="PHw-gF-8CQ">
-                                    <rect key="frame" x="1" y="228" width="396" height="16"/>
+                                    <rect key="frame" x="1" y="275" width="276" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="cpG-fA-kyU">
@@ -219,37 +250,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kw4-X4-pzX">
-                                <rect key="frame" x="8" y="13" width="328" height="13"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Experimentelles AirPod Max Verfügbarkeitsüberprüfungsprogramm" id="pVi-FU-80Y">
-                                    <font key="font" metaFont="system" size="10"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="D8z-uG-b9e">
-                                <rect key="frame" x="181" y="134" width="16" height="16"/>
-                            </progressIndicator>
-                            <button verticalHuggingPriority="750" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="mMI-IT-bzA">
-                                <rect key="frame" x="348" y="7" width="9" height="23"/>
-                                <buttonCell key="cell" type="roundTextured" title="Zum Store" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5Ps-WC-5sk">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="handleGoToStoreButtonTapped:" target="0Cv-Fv-9nz" id="Yx1-bg-J9H"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C5J-X6-p8s">
-                                <rect key="frame" x="365" y="7" width="9" height="23"/>
-                                <buttonCell key="cell" type="roundTextured" title="Neu laden" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uSB-ff-QFJ">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="handleRefreshButtonTapped:" target="0Cv-Fv-9nz" id="abf-HO-6ED"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="D8z-uG-b9e" firstAttribute="centerY" secondItem="7yv-GX-lte" secondAttribute="centerY" id="1FL-mL-Xsd"/>
@@ -276,7 +276,7 @@
                 </viewController>
                 <customObject id="N7t-2O-zER" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="537" y="869.5"/>
+            <point key="canvasLocation" x="537" y="949"/>
         </scene>
         <!--AirPods Max Checker-->
         <scene sceneID="xE7-DC-B5m">
@@ -364,7 +364,7 @@
                 </viewController>
                 <customObject id="zgb-HO-Zcv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="522" y="-62"/>
+            <point key="canvasLocation" x="518" y="-145"/>
         </scene>
     </scenes>
     <resources>
