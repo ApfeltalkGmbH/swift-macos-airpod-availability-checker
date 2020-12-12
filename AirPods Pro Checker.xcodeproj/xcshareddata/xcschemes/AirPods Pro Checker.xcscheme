@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4451FF76236C9FAA006544E9"
-               BuildableName = "AirPods Pro Checker.app"
-               BlueprintName = "AirPods Pro Checker"
+               BuildableName = "AirPods Max Checker.app"
+               BlueprintName = "AirPods Max Checker"
                ReferencedContainer = "container:AirPods Pro Checker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4451FF76236C9FAA006544E9"
-            BuildableName = "AirPods Pro Checker.app"
-            BlueprintName = "AirPods Pro Checker"
+            BuildableName = "AirPods Max Checker.app"
+            BlueprintName = "AirPods Max Checker"
             ReferencedContainer = "container:AirPods Pro Checker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4451FF76236C9FAA006544E9"
-            BuildableName = "AirPods Pro Checker.app"
-            BlueprintName = "AirPods Pro Checker"
+            BuildableName = "AirPods Max Checker.app"
+            BlueprintName = "AirPods Max Checker"
             ReferencedContainer = "container:AirPods Pro Checker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

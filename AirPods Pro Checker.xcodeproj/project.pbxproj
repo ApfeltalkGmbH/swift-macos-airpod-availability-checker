@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4451FF77236C9FAA006544E9 /* AirPods Pro Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AirPods Pro Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4451FF77236C9FAA006544E9 /* AirPods Max Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AirPods Max Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4451FF7A236C9FAA006544E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4451FF7C236C9FAA006544E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4451FF7E236C9FAB006544E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		4451FF78236C9FAA006544E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4451FF77236C9FAA006544E9 /* AirPods Pro Checker.app */,
+				4451FF77236C9FAA006544E9 /* AirPods Max Checker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,9 +75,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4451FF76236C9FAA006544E9 /* AirPods Pro Checker */ = {
+		4451FF76236C9FAA006544E9 /* AirPods Max Checker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4451FF87236C9FAB006544E9 /* Build configuration list for PBXNativeTarget "AirPods Pro Checker" */;
+			buildConfigurationList = 4451FF87236C9FAB006544E9 /* Build configuration list for PBXNativeTarget "AirPods Max Checker" */;
 			buildPhases = (
 				4451FF73236C9FAA006544E9 /* Sources */,
 				4451FF74236C9FAA006544E9 /* Frameworks */,
@@ -87,9 +87,9 @@
 			);
 			dependencies = (
 			);
-			name = "AirPods Pro Checker";
+			name = "AirPods Max Checker";
 			productName = "AirPods Pro Checker";
-			productReference = 4451FF77236C9FAA006544E9 /* AirPods Pro Checker.app */;
+			productReference = 4451FF77236C9FAA006544E9 /* AirPods Max Checker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -120,7 +120,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4451FF76236C9FAA006544E9 /* AirPods Pro Checker */,
+				4451FF76236C9FAA006544E9 /* AirPods Max Checker */,
 			);
 		};
 /* End PBXProject section */
@@ -295,7 +295,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.apfeltalk.AirPod-Checker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "AirPods Max Checker";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -318,7 +318,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.apfeltalk.AirPod-Checker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "AirPods Max Checker";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -335,7 +335,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4451FF87236C9FAB006544E9 /* Build configuration list for PBXNativeTarget "AirPods Pro Checker" */ = {
+		4451FF87236C9FAB006544E9 /* Build configuration list for PBXNativeTarget "AirPods Max Checker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4451FF88236C9FAB006544E9 /* Debug */,

@@ -37,7 +37,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="AirPods_Pro_Checker" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="AirPods_Max_Checker" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,19 +67,19 @@
         <!--AirPods Max Checker-->
         <scene sceneID="RUo-3t-yWg">
             <objects>
-                <viewController title="AirPods Max Checker" id="0Cv-Fv-9nz" customClass="ViewController" customModule="AirPods_Pro_Checker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="7yv-GX-lte">
-                        <rect key="frame" x="0.0" y="0.0" width="518" height="82"/>
+                <viewController title="AirPods Max Checker" id="0Cv-Fv-9nz" customClass="ViewController" customModule="AirPods_Max_Checker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" misplaced="YES" id="7yv-GX-lte">
+                        <rect key="frame" x="0.0" y="0.0" width="378" height="284"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kot-pS-5Qw">
-                                <rect key="frame" x="0.0" y="39" width="518" height="43"/>
+                                <rect key="frame" x="0.0" y="39" width="398" height="245"/>
                                 <clipView key="contentView" id="2MN-eg-biB">
-                                    <rect key="frame" x="1" y="1" width="516" height="41"/>
+                                    <rect key="frame" x="1" y="1" width="396" height="243"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="24" rowSizeStyle="medium" headerView="13O-dy-1X6" viewBased="YES" id="aly-Th-Mul">
-                                            <rect key="frame" x="0.0" y="0.0" width="546" height="42"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="546" height="218"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -207,7 +207,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="PHw-gF-8CQ">
-                                    <rect key="frame" x="1" y="26" width="516" height="16"/>
+                                    <rect key="frame" x="1" y="228" width="396" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="cpG-fA-kyU">
@@ -228,10 +228,10 @@
                                 </textFieldCell>
                             </textField>
                             <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="D8z-uG-b9e">
-                                <rect key="frame" x="251" y="33" width="16" height="16"/>
+                                <rect key="frame" x="181" y="134" width="16" height="16"/>
                             </progressIndicator>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mMI-IT-bzA">
-                                <rect key="frame" x="348" y="7" width="79" height="23"/>
+                            <button verticalHuggingPriority="750" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="mMI-IT-bzA">
+                                <rect key="frame" x="348" y="7" width="9" height="23"/>
                                 <buttonCell key="cell" type="roundTextured" title="Zum Store" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5Ps-WC-5sk">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -241,7 +241,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C5J-X6-p8s">
-                                <rect key="frame" x="435" y="7" width="79" height="23"/>
+                                <rect key="frame" x="365" y="7" width="9" height="23"/>
                                 <buttonCell key="cell" type="roundTextured" title="Neu laden" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uSB-ff-QFJ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -276,12 +276,12 @@
                 </viewController>
                 <customObject id="N7t-2O-zER" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="537" y="747"/>
+            <point key="canvasLocation" x="537" y="869.5"/>
         </scene>
-        <!--AirPods Pro Checker-->
+        <!--AirPods Max Checker-->
         <scene sceneID="xE7-DC-B5m">
             <objects>
-                <viewController title="AirPods Pro Checker" id="7Mo-ZF-lEZ" customClass="AboutViewController" customModule="AirPods_Pro_Checker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="AirPods Max Checker" id="7Mo-ZF-lEZ" customClass="AboutViewController" customModule="AirPods_Max_Checker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="HR5-6O-38Y">
                         <rect key="frame" x="0.0" y="0.0" width="461" height="363"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -342,10 +342,7 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="Qa3-6S-Uv6" firstAttribute="top" secondItem="O7e-Sq-W0J" secondAttribute="bottom" constant="15" id="3uk-5s-Tuw"/>
-                            <constraint firstItem="aaO-f9-5UW" firstAttribute="centerX" secondItem="Qa3-6S-Uv6" secondAttribute="centerX" id="4lN-ch-6Hn"/>
                             <constraint firstItem="aKP-1y-2nO" firstAttribute="top" secondItem="HR5-6O-38Y" secondAttribute="top" constant="20" id="83K-de-Wx5"/>
-                            <constraint firstItem="aKP-1y-2nO" firstAttribute="centerX" secondItem="HR5-6O-38Y" secondAttribute="centerX" id="FPL-Fq-6tU"/>
-                            <constraint firstItem="Qa3-6S-Uv6" firstAttribute="centerX" secondItem="O7e-Sq-W0J" secondAttribute="centerX" id="LB1-Px-1et"/>
                             <constraint firstItem="O7e-Sq-W0J" firstAttribute="trailing" secondItem="aKP-1y-2nO" secondAttribute="trailing" id="LMt-hG-KCk"/>
                             <constraint firstItem="O7e-Sq-W0J" firstAttribute="top" secondItem="aKP-1y-2nO" secondAttribute="bottom" constant="15" id="RIm-jO-7rA"/>
                             <constraint firstItem="Sal-UO-P2L" firstAttribute="trailing" secondItem="Qa3-6S-Uv6" secondAttribute="trailing" id="SuX-9j-2t2"/>
@@ -357,6 +354,8 @@
                             <constraint firstItem="Sal-UO-P2L" firstAttribute="top" secondItem="UPq-md-rqD" secondAttribute="top" id="gTT-dh-2DZ"/>
                             <constraint firstItem="Sal-UO-P2L" firstAttribute="leading" secondItem="UPq-md-rqD" secondAttribute="trailing" constant="20" id="hx2-GL-4bE"/>
                             <constraint firstItem="UPq-md-rqD" firstAttribute="leading" secondItem="Qa3-6S-Uv6" secondAttribute="leading" id="mBN-nC-7eC"/>
+                            <constraint firstAttribute="trailing" secondItem="aKP-1y-2nO" secondAttribute="trailing" constant="20" symbolic="YES" id="mJW-YX-CWf"/>
+                            <constraint firstItem="aaO-f9-5UW" firstAttribute="centerX" secondItem="Qa3-6S-Uv6" secondAttribute="centerX" id="tHY-qD-bbV"/>
                             <constraint firstItem="Sal-UO-P2L" firstAttribute="top" secondItem="aaO-f9-5UW" secondAttribute="bottom" constant="40" id="tbk-fy-xRr"/>
                             <constraint firstItem="aaO-f9-5UW" firstAttribute="top" secondItem="Qa3-6S-Uv6" secondAttribute="bottom" constant="35" id="twH-9G-n9k"/>
                             <constraint firstItem="aKP-1y-2nO" firstAttribute="leading" secondItem="HR5-6O-38Y" secondAttribute="leading" constant="20" id="ujo-rE-YQ5"/>
