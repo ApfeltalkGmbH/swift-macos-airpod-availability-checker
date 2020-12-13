@@ -2,11 +2,18 @@
 
 ![Logo](docs/icon.png "Logo (Jesper Frommherz, Michael Reimann)")
 
-This is a simple macOS Swift app to check the availability of **AirPods Pros** in the German Apple retail store locations. 
-
+This is a simple macOS Swift app to check the availability of **AirPods Max** in the German Apple retail store locations. 
 Nevertheless the app is neither final nor more than a little gimmick :). But it's happy coding time!
 
 #communityrocks
+
+## Version history
+
+|Version|Feature|
+|-|-|
+|1.0|AirPods|
+|2.0|Air PodsPro|
+|3.0|AirPods Max|
 
 ## Install
 1. Clone the repo `https://github.com/tscholze/swift-macos-airpod-availability-checker.git`
@@ -28,7 +35,11 @@ Nevertheless the app is neither final nor more than a little gimmick :). But it'
 
 ## Media coverage
 ### Version 1
-The app had a minor media coverage with articles in the German speaking [Apfeltalk magazin](https://www.apfeltalk.de/magazin/news/airpods-verfuegbarkeit/) and the also German speaking computer magazin [Computerbild](https://www.computerbild.de/artikel/cb-News-Internet-AirPods-ausverkauft-trotzdem-kaufen-18116593.html).
+- [Apfeltalk Magazin](https://www.apfeltalk.de/magazin/news/airpods-verfuegbarkeit/) 
+- [Computerbild](https://www.computerbild.de/artikel/cb-News-Internet-AirPods-ausverkauft-trotzdem-kaufen-18116593.html)
+
+### Version 2
+- [Apfeltalk Magazin](https://www.apfeltalk.de/magazin/in-eigener-sache/airpods-pro-checker-unsere-app-zeigt-euch-die-verfuegbarkeit-in-den-stores/)
 
 ## Thanks to
 - Jesper Frommherz - Icon creator ([#neverforgetjesper](https://twitter.com/hashtag/neverforgetjesper))
