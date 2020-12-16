@@ -13,7 +13,7 @@ Nevertheless the app is neither final nor more than a little gimmick :). But it'
 |-|-|
 |1.0|AirPods|
 |2.0|Air PodsPro|
-|3.0|AirPods Max|
+|3.x|AirPods Max|
 
 ## Install
 1. Clone the repo `https://github.com/tscholze/swift-macos-airpod-availability-checker.git`

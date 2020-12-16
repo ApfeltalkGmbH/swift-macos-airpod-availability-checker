@@ -39,7 +39,7 @@ class ViewController: NSViewController
         tableView.dataSource = self
         
         // Set content size
-        preferredContentSize = NSSize(width: 550, height: 460)
+        preferredContentSize = NSSize(width: 550, height: 480)
         
         // Load data from server.
         loadData()
