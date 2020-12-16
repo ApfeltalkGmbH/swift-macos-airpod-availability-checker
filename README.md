@@ -41,6 +41,9 @@ Nevertheless the app is neither final nor more than a little gimmick :). But it'
 ### Version 2
 - [Apfeltalk Magazin](https://www.apfeltalk.de/magazin/in-eigener-sache/airpods-pro-checker-unsere-app-zeigt-euch-die-verfuegbarkeit-in-den-stores/)
 
+### Version 3
+- [Apfeltalk Magazin](https://www.apfeltalk.de/magazin/news/airpods-max-gesucht-unser-airpods-max-checker-hilft/)
+
 ## Thanks to
 - Jesper Frommherz - Icon creator ([#neverforgetjesper](https://twitter.com/hashtag/neverforgetjesper))
 - Michael Reimann - Geschäftsführer [Apfeltalk](https://apfeltalk.de)
