@@ -18,9 +18,9 @@ class ViewController: NSViewController
     
     // MARK: - Private constants -
     
-    private let kZipSouth = "86150"
-    private let kZipNorth = "20095"
-    private let kJsonUrl = "https://www.apple.com/de/shop/retail/pickup-message?parts.0=MGYH3ZM%2FA&location="
+    private let kJsonGermanySouthUrl = "https://www.apple.com/de/shop/retail/pickup-message?parts.0=MGYH3ZM%2FA&location=86150"
+    private let kJsonGermanyNorthUrl = "https://www.apple.com/de/shop/retail/pickup-message?parts.0=MGYH3ZM%2FA&location=20095"
+    private let kJsonAustriaUrl = "https://www.apple.com/at/shop/retail/pickup-message?parts.0=MGYH3ZM%2FA&location=1010"
     private let storeUrl = "https://www.apple.com/de/shop/buy-airpods/airpods-max"
     
     // MARK: - Private properties -
@@ -75,8 +75,8 @@ class ViewController: NSViewController
         // Show loading indicator.
         progressIndicator.startAnimation(nil)
         
-        // Load stores form the south of Germany.
-        loadData(forZip: kZipSouth) {[weak self] (southStores, error) in
+        // 1. Load south German stores.
+        loadData(forUrl: kJsonGermanySouthUrl) {[weak self] (southStores, error) in
             
             guard let self = self else { return }
             
@@ -94,34 +94,44 @@ class ViewController: NSViewController
             // Use found stores or empty list.
             self.stores = southStores ?? []
             
-            // Secondly load stores from the north of the country.
-            self.loadData(forZip: self.kZipNorth) { [weak self] (northStores, _) in
+            // 2. Load noth German stores.
+            self.loadData(forUrl: self.kJsonGermanyNorthUrl) { [weak self] (northStores, _) in
+                guard let self = self else { return }
+                
                 // Only add not already present stores to the list.
                 for store in northStores ?? []
                 {
-                    if (self?.stores.contains(where: { $0.sanitizedName == store.sanitizedName }) == false)
+                    if (self.stores.contains(where: { $0.sanitizedName == store.sanitizedName }) == false)
                     {
-                        self?.stores.append(store)
+                        self.stores.append(store)
                     }
                 }
                 
-                // Order stores.
-                self?.stores.sort(by: { $0.sanitizedName < $1.sanitizedName })
-                
-                // Reload table view on main thread.
-                DispatchQueue.main.async
+                // 3. Load stores from Austria
+                self.loadData(forUrl: self.kJsonAustriaUrl) { [weak self] (austrianStores, _) in
+                    guard let self = self else { return }
+                    
+                    // Append Austrian stores.
+                    self.stores.append(contentsOf: austrianStores ?? [])
+                    
+                    // Sort stores by city.
+                    self.stores.sort(by: { $0.city < $1.city })
+                    
+                    // Reload table view on main thread.
+                    DispatchQueue.main.async
                     {
-                        self?.tableView.reloadData()
-                        self?.progressIndicator.stopAnimation(nil)
+                            self.tableView.reloadData()
+                            self.progressIndicator.stopAnimation(nil)
+                    }
                 }
             }
         }
     }
     
-    private func loadData(forZip zip: String, completion: @escaping (([Store]?, String?) -> Void))
+    private func loadData(forUrl urlString: String, completion: @escaping (([Store]?, String?) -> Void))
     {
         // Build url.
-        guard let url = URL(string: "\(kJsonUrl)\(zip)") else { return }
+        guard let url = URL(string: urlString) else { return }
         
         // Create task to request data.
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
